@@ -1,0 +1,37 @@
+<launch>
+ <group ns="/camera_1">
+  <include file="$(find apriltag_ros)/launch/continuous_detection.launch">
+    <arg name="camera_name" default="/nebula_1/mtof_rgb" />
+    <arg name="config_file" value="$(find apriltag_ros)/config/tags_group1.yaml"/>
+  </include>
+ </group>
+ 
+ <group ns="/camera_2">
+  <include file="$(find apriltag_ros)/launch/continuous_detection.launch">
+    <arg name="camera_name" default="/nebula_2/mtof_rgb" />
+    <arg name="config_file" value="$(find apriltag_ros)/config/tags_group2.yaml"/>
+  </include>
+ </group>
+
+ <group ns="/camera_3">
+  <include file="$(find apriltag_ros)/launch/continuous_detection.launch">
+    <arg name="camera_name" default="/nebula_3/mtof_rgb" />
+    <arg name="config_file" value="$(find apriltag_ros)/config/tags_group3.yaml"/>
+  </include>
+ </group>
+
+ <group ns="/camera_4">
+  <include file="$(find apriltag_ros)/launch/continuous_detection.launch">
+    <arg name="camera_name" default="/nebula_4/mtof_rgb" />
+    <arg name="config_file" value="$(find apriltag_ros)/config/tags_group4.yaml"/>
+  </include>
+ </group>
+
+ <group ns="/camera_5">
+  <include file="$(find apriltag_ros)/launch/continuous_detection.launch">
+    <arg name="camera_name" default="/nebula_5/mtof_rgb" />
+    <arg name="config_file" value="$(find apriltag_ros)/config/tags_group5.yaml"/>
+  </include>
+ </group>
+ 
+</launch>

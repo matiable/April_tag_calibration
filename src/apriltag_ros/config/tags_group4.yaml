@@ -1,0 +1,45 @@
+# # Definitions of tags to detect
+#
+# ## General remarks
+#
+# - All length in meters
+# - 'size' refers to the length of the shared border between solid black and solid white rectangle.
+#   See README.md or https://github.com/AprilRobotics/apriltag/wiki/AprilTag-User-Guide#pose-estimation for details.
+# - Ellipsis (...) signifies that the previous element can be repeated multiple times.
+#
+# ## Standalone tag definitions
+# ### Remarks
+#
+# - name is optional
+#
+# ### Syntax
+#
+# standalone_tags:
+#   [
+#     {id: ID, size: SIZE, name: NAME},
+#     ...
+#   ]
+standalone_tags:
+  [
+  {id: 001, size: 0.10, name: tag1},
+  #{id: 000, size: 0.1728, name: tag0},
+  #{id: 004, size: 0.1728, name: tag4},
+  #{id: 002, size: 0.1728, name: tag2},
+  #{id: 005, size: 0.1728, name: tag5},
+  ]
+
+tag_bundles:
+  [
+    {
+      name: 'tag',
+      layout:
+        [          
+          #{id: 0, size: 0.1728, x: 0.309, y: 0.550, z: 0.123, qw: 0.7071068, qx: 0.7071067811865475, qy: 0, qz: 0},
+          #{id: 4, size: 0.1728, x: 0, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+          #{id: 2, size: 0.1728, x: 0.509, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+          #{id: 5, size: 0.1728, x: 0.509, y: 0.341, z: 0,qw: 1, qx: 0, qy: 0, qz: 0},
+          #{id: 1, size: 0.1, x: 0, y: 0.0000, z: 0, qw: 0.7071068, qx: 0, qy: 0, qz: -0.7071068},
+          {id: 1, size: 0.10, x: 0, y: 0, z: 0, qw: 1, qx: 0, qy: 0, qz: 0},
+        ]
+    }
+  ]
